@@ -1,8 +1,8 @@
 {
   "generated_at": "2026-08-28",
   "jurisdiction": "ch",
-  "validation_year": "2022 factors; 2026 Zurich tariff table pending 2022-vintage verification",
-  "note": "Bounded Zurich wealth-tax intake for the Cantó and García-Rodríguez replication. These prepared manifest paths are not a signed corpus-release binding; the 2026 ESTV tariff must not be represented as the unverified 2022 tariff.",
+  "validation_year": "2022 and 2026",
+  "note": "Bounded Zurich wealth-tax intake for the Cantó and García-Rodríguez replication. These prepared manifest paths are not a signed corpus-release binding; the official historical 2022 StG tariff and the 2026 indexed ESTV table remain distinct vintages.",
   "source_intake": {
     "status": "prepared_pending_publication",
     "manifests": [
@@ -29,9 +29,12 @@
     },
     {
       "instrument": "Zurich wealth-tax tariff",
-      "governing_law": "Zurich Tax Act section 47 table represented in the ESTV 2026 canton sheet",
-      "corpus_citation_path": "ch-zh/guidance/estv/kantonsblatt/2026/wealth-tax",
-      "status": "2026_manifested_2022_vintage_open"
+      "governing_law": "Zurich Tax Act section 47 in historical Nachtrag 115 and the separately indexed ESTV 2026 canton sheet",
+      "corpus_citation_paths": [
+        "ch-zh/statute/stg/631-1/2022/section-47",
+        "ch-zh/guidance/estv/kantonsblatt/2026/wealth-tax"
+      ],
+      "status": "2022_and_2026_manifested_not_ingested"
     }
   ]
 }

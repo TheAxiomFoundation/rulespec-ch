@@ -4,15 +4,17 @@
 
 The Switzerland source scope and Zurich layout are ready. The prepared
 axiom-corpus manifests are not yet published; the CI and toolchain placeholders
-therefore remain deliberately non-validating. The 2022 Zurich tariff vintage
-also remains open.
+therefore remain deliberately non-validating. The official 2022 Zurich tariff
+source has been identified and manifested separately from the 2026 table.
 
 ## Done
 
 - Created the jurisdiction-scoped repository layout and empty validation ratchets.
 - Identified the prepared upstream source manifests.
 - Added the Zurich sub-jurisdiction layout root.
-- Recorded the federal, canton, and city manifest paths and the tariff-vintage gap.
+- Recorded the federal, canton, and city manifest paths.
+- Closed the 2022 tariff-vintage source gap with the official historical StG
+  Nachtrag 115, § 47, without relabelling the distinct 2026 indexed table.
 
 ## Next
 
