@@ -7,12 +7,12 @@ allowed_root_directories:
   - programs
   - tests
   - ch
+  - ch-zh
 allowed_root_files:
   - .gitignore
   - CLAUDE.md
   - PROGRESS.md
   - README.md
-  - corpus-manifest-skeleton.yaml
   - engine-currency-seed.diff
   - known-missing-money-atoms.yaml
   - known-validation-gaps.yaml
@@ -31,6 +31,6 @@ path_rules:
     allow_extensions: [".yaml"]
   - patterns: ["tests/**"]
     allow_extensions: [".py"]
-  - patterns: ["ch/**"]
+  - patterns: ["ch/**", "ch-zh/**"]
     allow_extensions: [".yaml"]
     allow_filenames: [".gitkeep"]

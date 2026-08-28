@@ -9,27 +9,29 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT_DIRS = ("statutes", "regulations", "policies", "legislation")
+NAMESPACES = ("ch", "ch-zh")
 IGNORED_DIRS = {".git", ".pytest_cache", ".ruff_cache", ".venv", "__pycache__"}
-ALLOWED_ROOT_DIRS = {".axiom", ".github", "bulk", "data", "programs", "tests", "ch"}
+ALLOWED_ROOT_DIRS = {".axiom", ".github", "bulk", "data", "programs", "tests", *NAMESPACES}
 ALLOWED_ROOT_FILES = {
-    ".gitignore", "CLAUDE.md", "PROGRESS.md", "README.md", "corpus-manifest-skeleton.yaml",
+    ".gitignore", "CLAUDE.md", "PROGRESS.md", "README.md",
     "engine-currency-seed.diff", "known-missing-money-atoms.yaml",
     "known-validation-gaps.yaml", "oracle-coverage-pending.yaml", "variables.toml",
 }
 
 
 def rulespec_files() -> list[Path]:
-    return sorted(path for bucket in CONTENT_DIRS for path in (ROOT / "ch" / bucket).rglob("*.yaml") if not path.name.endswith(".test.yaml"))
+    return sorted(path for namespace in NAMESPACES for bucket in CONTENT_DIRS for path in (ROOT / namespace / bucket).rglob("*.yaml") if not path.name.endswith(".test.yaml"))
 
 
-def test_only_ch_namespace_present() -> None:
+def test_only_supported_ch_namespaces_present() -> None:
     names = {child.name for child in ROOT.iterdir() if child.is_dir() and re.fullmatch(r"[a-z]{2}(?:-[a-z0-9-]+)*", child.name) and any((child / marker).is_dir() for marker in CONTENT_DIRS)}
-    assert names <= {"ch"}
+    assert names <= set(NAMESPACES)
 
 
 def test_ch_content_buckets_exist() -> None:
-    for marker in ("statutes", "regulations", "policies"):
-        assert (ROOT / "ch" / marker).is_dir()
+    for namespace in NAMESPACES:
+        for marker in ("statutes", "regulations", "policies"):
+            assert (ROOT / namespace / marker).is_dir()
 
 
 def test_root_inventory_is_allowed() -> None:

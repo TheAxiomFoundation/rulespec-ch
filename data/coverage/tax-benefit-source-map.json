@@ -1,7 +1,37 @@
 {
-  "generated_at": "TODO(ch)",
+  "generated_at": "2026-08-28",
   "jurisdiction": "ch",
-  "validation_year": "TODO(ch)",
-  "note": "TODO(ch): map the tax-benefit surface to governing law.",
-  "instruments": []
+  "validation_year": "2022 factors; 2026 Zurich tariff table pending 2022-vintage verification",
+  "note": "Bounded Zurich wealth-tax intake for the Cantó and García-Rodríguez replication. These prepared manifest paths are not a signed corpus-release binding; the 2026 ESTV tariff must not be represented as the unverified 2022 tariff.",
+  "source_intake": {
+    "status": "prepared_pending_publication",
+    "manifests": [
+      "manifests/ch-wealth-tax-family-statute-official-documents.yaml",
+      "manifests/ch-zh-wealth-tax-factor-statute-official-documents.yaml",
+      "manifests/ch-zh-wealth-tax-official-documents.yaml"
+    ]
+  },
+  "instruments": [
+    {
+      "instrument": "Family tax unit",
+      "governing_law": "StHG Article 3(3)",
+      "corpus_citation_path": "ch/statute/sthg/family-tax-unit",
+      "status": "manifested_not_ingested"
+    },
+    {
+      "instrument": "Canton and City of Zurich tax factors",
+      "governing_law": "Kantonsratsbeschluss 631.21 and City of Zurich Rechnung 2023",
+      "corpus_citation_paths": [
+        "ch-zh/statute/kantonsratsbeschluss/631-21/steuerfuss-2022-2023",
+        "ch-zh/guidance/city-zurich/rechnung-2023/steuerfuss-2020-2023"
+      ],
+      "status": "manifested_not_ingested"
+    },
+    {
+      "instrument": "Zurich wealth-tax tariff",
+      "governing_law": "Zurich Tax Act section 47 table represented in the ESTV 2026 canton sheet",
+      "corpus_citation_path": "ch-zh/guidance/estv/kantonsblatt/2026/wealth-tax",
+      "status": "2026_manifested_2022_vintage_open"
+    }
+  ]
 }
