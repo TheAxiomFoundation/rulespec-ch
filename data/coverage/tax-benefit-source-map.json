@@ -8,6 +8,7 @@
     "manifests": [
       "manifests/ch-wealth-tax-family-statute-official-documents.yaml",
       "manifests/ch-zh-wealth-tax-factor-statute-official-documents.yaml",
+      "manifests/ch-zh-wealth-tax-guidance-official-documents.yaml",
       "manifests/ch-zh-wealth-tax-official-documents.yaml"
     ]
   },
