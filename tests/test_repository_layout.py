@@ -13,7 +13,7 @@ NAMESPACES = ("ch", "ch-zh")
 IGNORED_DIRS = {".git", ".pytest_cache", ".ruff_cache", ".venv", "__pycache__"}
 ALLOWED_ROOT_DIRS = {".axiom", ".github", "bulk", "data", "programs", "tests", *NAMESPACES}
 ALLOWED_ROOT_FILES = {
-    ".gitignore", "CLAUDE.md", "PROGRESS.md", "README.md",
+    ".gitignore", "CLAUDE.md", "LICENSE", "LICENSE-CODE", "NOTICE", "PROGRESS.md", "README.md",
     "engine-currency-seed.diff", "known-missing-money-atoms.yaml",
     "known-validation-gaps.yaml", "oracle-coverage-pending.yaml", "variables.toml",
 }
